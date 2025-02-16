@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/caliat4/static/css/main.3701761d.css",
+    "main.js": "/caliat4/static/js/main.bc5c214c.js",
+    "static/js/453.d31a6674.chunk.js": "/caliat4/static/js/453.d31a6674.chunk.js",
+    "index.html": "/caliat4/index.html",
+    "main.3701761d.css.map": "/caliat4/static/css/main.3701761d.css.map",
+    "main.bc5c214c.js.map": "/caliat4/static/js/main.bc5c214c.js.map",
+    "453.d31a6674.chunk.js.map": "/caliat4/static/js/453.d31a6674.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3701761d.css",
+    "static/js/main.bc5c214c.js"
+  ]
+}
