@@ -13,7 +13,8 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://marcobaioo.github.io/caliat4",
+  "build": "react-scripts build && cp public/_redirects build/_redirects",
+  "homepage": "https://caliat4.netlify.app/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
