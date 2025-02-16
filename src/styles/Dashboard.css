@@ -1,22 +1,19 @@
+body {
+    background-color: #F5F5F5;
+}
 .dashboard-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
     background-color: #F5F5F5;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px; /* Limita la larghezza massima */
+    margin: 0 auto; /* Centra la box orizzontalmente */
   }
   
-  .dashboard-title {
-    font-size: 2rem;
-    color: #C0392B;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard-subtitle {
-    font-size: 1.2rem;
-    color: #333;
-  }
   .dashboard-header {
     display: flex;
     align-items: center;
@@ -25,6 +22,25 @@
     padding: 20px;
     background-color: #FFFFFF;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; /* Assicura che il testo sia centrato */
+  }
+  .add-event-button {
+    padding: 10px 20px;
+    background-color: #C0392B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Spinge il pulsante a destra */
   }
   
   .profile-icon {
@@ -51,6 +67,15 @@
     padding: 5px 10px;
     cursor: pointer;
   }
+  
+  .dashboard-title {
+    font-size: 2rem;
+    color: #C0392B;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center; /* Centra la scritta */
+  }
+  
   .add-event-button {
     padding: 10px 20px;
     background-color: #C0392B;
@@ -58,9 +83,18 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.2rem;
+    color: #333;
     margin-top: 20px;
   }
   
+  .event-list {
+    width: 100%;
+    max-width: 800px; /* Larghezza massima */
+  }
   .popup {
     position: fixed;
     top: 0;
@@ -76,30 +110,41 @@
   .popup-content {
     background-color: #FFFFFF;
     padding: 20px;
-    border-radius: 5px;
-    width: 300px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Aumentato da 400px a 500px */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .popup-content h2 {
     margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #C0392B;
   }
   
   .popup-content input,
   .popup-content textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #E0E0E0;
     border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .popup-content textarea {
+    height: 100px; /* Altezza fissa per il textarea */
+    min-height: 20px;
+    resize: vertical; /* Permette di ridimensionare verticalmente */
   }
   
   .popup-content button {
-    padding: 5px 10px;
+    padding: 10px 20px;
     margin-right: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
   }
   
   .popup-content button[type="submit"] {

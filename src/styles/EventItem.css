@@ -1,0 +1,70 @@
+.event-item {
+    border-left: 3px solid #C0392B;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+  }
+  
+  .event-content h3 {
+    margin: 0;
+    color: #C0392B;
+  }
+  
+  .event-content p {
+    margin: 5px 0;
+    word-wrap: break-word; /* Permette al testo di andare a capo */
+    overflow-wrap: break-word; /* Gestisce il testo lungo */
+  }
+  
+  .event-content button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .event-content button:first-of-type {
+    background-color: #E0E0E0;
+    color: #333;
+  }
+  
+  .event-content button:last-of-type {
+    background-color: #C0392B;
+    color: #FFFFFF;
+  }
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .edit-form input,
+  .edit-form textarea {
+    padding: 5px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 20px;
+  }
+  
+  .edit-form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-form button:first-of-type {
+    background-color: #C0392B;
+    color: #FFFFFF;
+  }
+  
+  .edit-form button:last-of-type {
+    background-color: #E0E0E0;
+    color: #333;
+  }

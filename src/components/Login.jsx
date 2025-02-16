@@ -1,24 +1,33 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(''); // Stato per gestire i messaggi di errore
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Validazione semplice
-    if (!username.trim() || !password.trim()) {
-      setError('Username e password sono obbligatori.');
-      return;
-    }
+    // Validazione degli utenti
+    const validUsers = [
+      { username: 'Marco', password: 'Caliatona69' },
+      { username: 'Ettore', password: 'AltervistaCaliat0' },
+    ];
 
-    // Simulazione di un accesso riuscito
-    setError('');
-    console.log('Accesso riuscito:', username);
-    // Qui aggiungeremo il reindirizzamento alla pagina principale
+    const isValidUser = validUsers.some(
+      (user) => user.username === username && user.password === password
+    );
+
+    if (isValidUser) {
+      setError('');
+      localStorage.setItem('loggedInUser', username); // Salva l'utente loggato
+      navigate('/dashboard'); // Reindirizza alla dashboard
+    } else {
+      setError('Username o password non validi.');
+    }
   };
 
   return (
@@ -39,7 +48,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           className="login-input"
         />
-        {error && <p className="login-error">{error}</p>} {/* Mostra il messaggio di errore */}
+        {error && <p className="login-error">{error}</p>}
         <button type="submit" className="login-button">Accedi</button>
       </form>
     </div>
