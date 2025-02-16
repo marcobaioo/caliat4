@@ -13,8 +13,14 @@ const Login = () => {
 
     // Validazione degli utenti
     const validUsers = [
-      { username: 'Marco', password: 'Caliatona69' },
-      { username: 'Ettore', password: 'AltervistaCaliat0' },
+      {
+        username: process.env.REACT_APP_USERNAME_MARCO,
+        password: process.env.REACT_APP_PASSWORD_MARCO,
+      },
+      {
+        username: process.env.REACT_APP_USERNAME_ETTORE,
+        password: process.env.REACT_APP_PASSWORD_ETTORE,
+      },
     ];
 
     const isValidUser = validUsers.some(
@@ -23,8 +29,8 @@ const Login = () => {
 
     if (isValidUser) {
       setError('');
-      localStorage.setItem('loggedInUser', username); // Salva l'utente loggato
-      navigate('/dashboard'); // Reindirizza alla dashboard
+      localStorage.setItem('loggedInUser', username);
+      navigate('/dashboard');
     } else {
       setError('Username o password non validi.');
     }
